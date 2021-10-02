@@ -1,0 +1,61 @@
+# Project: ListaV
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o GenerarNodo.o CargarDatos.o UbicarNodo.o ListarLista.o Menu.o BajaAlumnos.o Cambios.o Promedio.o DesvStd.o CargarArch.o GravaArch.o
+LINKOBJ  = main.o GenerarNodo.o CargarDatos.o UbicarNodo.o ListarLista.o Menu.o BajaAlumnos.o Cambios.o Promedio.o DesvStd.o CargarArch.o GravaArch.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = ListaV.exe
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+GenerarNodo.o: GenerarNodo.c
+	$(CC) -c GenerarNodo.c -o GenerarNodo.o $(CFLAGS)
+
+CargarDatos.o: CargarDatos.c
+	$(CC) -c CargarDatos.c -o CargarDatos.o $(CFLAGS)
+
+UbicarNodo.o: UbicarNodo.c
+	$(CC) -c UbicarNodo.c -o UbicarNodo.o $(CFLAGS)
+
+ListarLista.o: ListarLista.c
+	$(CC) -c ListarLista.c -o ListarLista.o $(CFLAGS)
+
+Menu.o: Menu.c
+	$(CC) -c Menu.c -o Menu.o $(CFLAGS)
+
+BajaAlumnos.o: BajaAlumnos.c
+	$(CC) -c BajaAlumnos.c -o BajaAlumnos.o $(CFLAGS)
+
+Cambios.o: Cambios.c
+	$(CC) -c Cambios.c -o Cambios.o $(CFLAGS)
+
+Promedio.o: Promedio.c
+	$(CC) -c Promedio.c -o Promedio.o $(CFLAGS)
+
+DesvStd.o: DesvStd.c
+	$(CC) -c DesvStd.c -o DesvStd.o $(CFLAGS)
+
+CargarArch.o: CargarArch.c
+	$(CC) -c CargarArch.c -o CargarArch.o $(CFLAGS)
+
+GravaArch.o: GravaArch.c
+	$(CC) -c GravaArch.c -o GravaArch.o $(CFLAGS)
