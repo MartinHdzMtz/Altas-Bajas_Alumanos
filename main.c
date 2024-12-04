@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
 				break;
 			}
 			case 4: {
-                ListarLista();
+                             ListarLista();
 				system("pause");				
 				break;
 			}
@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
                 prom = DesvStd();
                 system("cls");
                 printf("\n\n\t\t DESVIACION ESTANDAR DE CALIFICACIONES\n");
-                printf("\t\t La desviación estandar del grupo es %6.2f\n\n", prom);
+                printf("\t\t La desviaciÃ³n estandar del grupo es %6.2f\n\n", prom);
                 system("pause");
 				break;
 			}
