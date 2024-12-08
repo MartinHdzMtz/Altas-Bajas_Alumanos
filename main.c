@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 	if ( CargarArch( argv[1] ) !=0 ) {
 	printf("Hubo un error al leer el archivo\n");
 	   return -1;
-}
+    }
 	while(opcion >= 0 && opcion < 7) {
 		opcion = Menu();
 		switch(opcion) {
